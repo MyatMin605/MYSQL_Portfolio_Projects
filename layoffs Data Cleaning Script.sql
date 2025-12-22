@@ -175,10 +175,11 @@ FROM layoffs_staging2
 WHERE total_laid_off is null
 AND percentage_laid_off is null;
 
-ALTER TABLE layoffs_staging2
-DROP COLUMN row_num;
 
 DELETE 
 FROM layoffs_staging2
 WHERE total_laid_off is null
 AND percentage_laid_off is null;
+
+ALTER TABLE layoffs_staging2
+DROP COLUMN row_num;
